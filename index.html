@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharasi Group Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="avatar">P</div>
+      <div class="group">
+        <h2>Pharasi Group</h2>
+        <small id="status">Connecting...</small>
+      </div>
+      <button id="logoutBtn" class="hidden">Exit</button>
+    </header>
+
+    <section id="joinScreen" class="join">
+      <h1>Welcome to Pharasi</h1>
+      <p>Join the group and chat with everyone.</p>
+      <input id="nameInput" maxlength="30" placeholder="Your name">
+      <button id="joinBtn">Join Group</button>
+      <p id="joinError" class="error"></p>
+    </section>
+
+    <main id="chatScreen" class="hidden">
+      <div id="messages" class="messages"></div>
+
+      <div id="preview" class="preview hidden">
+        <img id="previewImage" alt="Image preview">
+        <button id="cancelPhoto">✕</button>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <label for="photoInput" class="photo">📷</label>
+        <input type="file" id="photoInput" accept="image/*" hidden>
+        <input id="messageInput" maxlength="2000"
+               placeholder="Type a message..." autocomplete="off">
+        <button id="sendBtn" type="submit">➤</button>
+      </form>
+      <p id="chatError" class="error"></p>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
